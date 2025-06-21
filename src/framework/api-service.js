@@ -2,7 +2,7 @@
 export default class ApiService {
   /**
     @param {string} endPoint 
-    @param {string} authorization А
+    @param {string} authorization 
    */
   constructor(endPoint, authorization) {
     this._endPoint = endPoint;
@@ -10,6 +10,7 @@ export default class ApiService {
   }
 
   /**
+   
     @param {Object} config 
     @param {string} config.url 
     @param {string} [config.method] 
@@ -37,8 +38,9 @@ export default class ApiService {
       ApiService.catchError(err);
     }
   }
-  
+
   /**
+   
     @param {Response} response 
     @returns {Promise<JSON>}
    */
@@ -47,6 +49,7 @@ export default class ApiService {
   }
 
   /**
+   
     @param {Response} response 
    */
   static checkStatus(response) {
@@ -56,6 +59,7 @@ export default class ApiService {
   }
 
   /**
+   
     @param {Error} err 
    */
   static catchError(err) {

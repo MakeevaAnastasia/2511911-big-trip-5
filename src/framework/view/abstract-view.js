@@ -4,15 +4,14 @@ import './abstract-view.css';
 /** @const {string}  */
 const SHAKE_CLASS_NAME = 'shake';
 
-/** @const {number}  */
+/** @const {number} */
 const SHAKE_ANIMATION_TIMEOUT = 600;
-
 
 export default class AbstractView {
   /** @type {HTMLElement|null}  */
   #element = null;
 
-  /** @type {Object} */
+  /** @type {Object}  */
   _callback = {};
 
   constructor() {
@@ -22,6 +21,7 @@ export default class AbstractView {
   }
 
   /**
+   
     @returns {HTMLElement} 
    */
   get element() {
@@ -33,6 +33,7 @@ export default class AbstractView {
   }
 
   /**
+   
     @abstract
     @returns {string} 
    */
@@ -45,6 +46,7 @@ export default class AbstractView {
   }
 
   /**
+   
     @param {shakeCallback} [callback] 
    */
   shake(callback) {

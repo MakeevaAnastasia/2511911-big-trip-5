@@ -1,11 +1,11 @@
 import AbstractView from './abstract-view.js';
 
-
 export default class AbstractStatefulView extends AbstractView {
   /** @type {Object}  */
   _state = {};
 
   /**
+   
     @param {Object} update 
    */
   updateElement(update) {
@@ -26,11 +26,13 @@ export default class AbstractStatefulView extends AbstractView {
   }
 
   /**
+   
     @param {Object} update 
    */
   _setState(update) {
     this._state = structuredClone({...this._state, ...update});
   }
+
 
   #rerenderElement() {
     const prevElement = this.element;

@@ -3,14 +3,14 @@ import AbstractView from './view/abstract-view.js';
 /** @enum {string}  */
 const RenderPosition = {
   BEFOREBEGIN: 'beforebegin',
-  BEFOREEND: 'beforeend',
   AFTERBEGIN: 'afterbegin',
+  BEFOREEND: 'beforeend',
   AFTEREND: 'afterend',
 };
 
 /**
- 
-  @param {string} template 
+ *
+ @param {string} template 
   @returns {HTMLElement} 
  */
 function createElement(template) {
@@ -21,6 +21,7 @@ function createElement(template) {
 }
 
 /**
+ 
   @param {AbstractView} component 
   @param {HTMLElement} container 
   @param {string} place 
@@ -38,6 +39,7 @@ function render(component, container, place = RenderPosition.BEFOREEND) {
 }
 
 /**
+ 
   @param {AbstractView} newComponent 
   @param {AbstractView} oldComponent 
  */
@@ -59,7 +61,8 @@ function replace(newComponent, oldComponent) {
 }
 
 /**
-  @param {AbstractView} component 
+ 
+ @param {AbstractView} component 
  */
 function remove(component) {
   if (component === null) {

@@ -2,10 +2,10 @@ import './ui-blocker.css';
 
 
 export default class UiBlocker {
-  /**  @type {number} */
+  /** @type {number}  */
   #lowerLimit;
 
-  /** @type {number} */
+  /** @type {number}  */
   #upperLimit;
 
   /** @type {HTMLElement|null}  */
@@ -21,9 +21,9 @@ export default class UiBlocker {
   #timerId;
 
   /**
-    @param {Object} config 
-    @param {number} config.lowerLimit 
-    @param {number} config.upperLimit 
+   * @param {Object} config 
+   * @param {number} config.lowerLimit 
+   * @param {number} config.upperLimit 
    */
   constructor({lowerLimit, upperLimit}) {
     this.#lowerLimit = lowerLimit;
@@ -40,7 +40,6 @@ export default class UiBlocker {
       this.#addClass();
     }, this.#lowerLimit);
   }
-
   unblock() {
     this.#endTime = Date.now();
     const duration = this.#endTime - this.#startTime;

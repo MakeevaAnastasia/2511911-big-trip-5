@@ -1,6 +1,6 @@
 
 export default class Observable {
-  /** @type {Set<observerCallback>}  */
+  /** @type {Set<observerCallback>} */
   #observers = new Set();
 
   /**
@@ -12,6 +12,7 @@ export default class Observable {
   }
 
   /**
+   
     @param {observerCallback} observer 
    */
   removeObserver(observer) {
@@ -19,6 +20,7 @@ export default class Observable {
   }
 
   /**
+   
     @param {*} event 
     @param {*} payload 
    */
@@ -27,7 +29,8 @@ export default class Observable {
   }
 }
 
-/** 
+/**
+ 
   @callback observerCallback
   @param {*} event 
   @param {*} [payload] 
